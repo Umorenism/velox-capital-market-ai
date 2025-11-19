@@ -10,6 +10,7 @@ import Signup from "./pages/Signup";
  import MainLayout from "./layouts/MainLayout";
 import AuthLayout from "./layouts/AuthLayout";
 import Trade from "./pages/Trade";
+import AIEngine from "./pages/AiEngine";
 // import Footer from "../components/Footer";
 // import Header from "../components/Header";
 export default function App() {
@@ -48,6 +49,14 @@ export default function App() {
           element={
               <MainLayout>
               < Trade/>
+             </MainLayout>
+          }
+        />
+        <Route
+          path="/engine"
+          element={
+              <MainLayout>
+              < AIEngine/>
              </MainLayout>
           }
         />

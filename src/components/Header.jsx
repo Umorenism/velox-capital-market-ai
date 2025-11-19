@@ -78,7 +78,7 @@ export default function Header() {
             <div className="w-10 h-10 bg-gradient-to-br from-teal-500 to-cyan-400 rounded-xl flex items-center justify-center font-black text-black text-xl">
               V
             </div>
-            <span className="text-2xl font-black bg-gradient-to-r from-teal-400 to-yellow-400 bg-clip-text text-transparent">
+            <span className="text-2xl font-black bg-gradient-to-r from-teal-400 to-yellow-400 bg-clip-text text-white">
               VELOX
             </span>
           </Link>

@@ -60,7 +60,7 @@ const Footer = () => {
               <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-400 rounded-xl flex items-center justify-center font-black text-black text-2xl shadow-lg">
                 V
               </div>
-              <h2 className="text-4xl font-black bg-gradient-to-r from-teal-400 to-yellow-400 bg-clip-text text-transparent">
+              <h2 className="text-4xl font-black bg-gradient-to-r from-teal-400 to-yellow-400 bg-clip-text text-white">
                 VELOX
               </h2>
             </div>
