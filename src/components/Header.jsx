@@ -55,8 +55,8 @@ export default function Header() {
   const services = [
     { name: "Live Trading", icon: <FiTrendingUp />, path: "/markets" },
     { name: "AI Alpha Engine", icon: <FiCpu />, path: "/engine" },
-    { name: "Zero-Latency Infra", icon: <FiZap />, path: "/markets#infra" },
-    { name: "Risk Shield", icon: <FiShield />, path: "/markets#risk" },
+    { name: "Zero-Latency Infra", icon: <FiZap />, path: "/infra" },
+    { name: "Risk Shield", icon: <FiShield />, path: "/risk" },
     { name: "Portfolio Analytics", icon: <FiBarChart2 />, path: "/markets#analytics" },
   ];
 

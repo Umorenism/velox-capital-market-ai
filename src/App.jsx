@@ -11,6 +11,8 @@ import Signup from "./pages/Signup";
 import AuthLayout from "./layouts/AuthLayout";
 import Trade from "./pages/Trade";
 import AIEngine from "./pages/AiEngine";
+import ZeroLatency from "./pages/ZeroLatency";
+import RiskManagement from "./pages/RiskManagement";
 // import Footer from "../components/Footer";
 // import Header from "../components/Header";
 export default function App() {
@@ -57,6 +59,22 @@ export default function App() {
           element={
               <MainLayout>
               < AIEngine/>
+             </MainLayout>
+          }
+        />
+        <Route
+          path="/infra"
+          element={
+              <MainLayout>
+              < ZeroLatency/>
+             </MainLayout>
+          }
+        />
+        <Route
+          path="/risk"
+          element={
+              <MainLayout>
+              < RiskManagement/>
              </MainLayout>
           }
         />

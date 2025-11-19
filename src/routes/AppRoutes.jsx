@@ -17,10 +17,9 @@ export default function AppRoutes() {
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/media" element={<Media />} />
-          {/* <Route path="/markets" element={<Ourservices />} /> */}
+          
           <Route path="/contact" element={<Contact />} />
-          {/* <Route path="/engine" element={<AIEngine />} /> */}
-          {/* <Route path="/markets" element={<Trade />} /> */}
+          
         </Route>
 
         {/* Auth routes (outside layout) */}
