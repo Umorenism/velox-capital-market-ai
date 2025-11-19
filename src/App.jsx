@@ -9,6 +9,7 @@ import Login from "./pages/Signin";
 import Signup from "./pages/Signup";
  import MainLayout from "./layouts/MainLayout";
 import AuthLayout from "./layouts/AuthLayout";
+import Trade from "./pages/Trade";
 // import Footer from "../components/Footer";
 // import Header from "../components/Header";
 export default function App() {
@@ -37,8 +38,16 @@ export default function App() {
         <Route
           path="/our-services"
           element={
-             <MainLayout>
+            //  <MainLayout>
               <OurServices />
+            //  </MainLayout>
+          }
+        />
+        <Route
+          path="/markets"
+          element={
+              <MainLayout>
+              < Trade/>
              </MainLayout>
           }
         />

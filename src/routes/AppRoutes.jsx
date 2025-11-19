@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "../pages/Home";
 import Contact from "../pages/Contact";
-import Ourservices from "../pages/Ourservices";
 import Signup from "../auth/Signup";
 import Signin from "../auth/Signin";
 import MainLayout from "../layouts/MainLayout";
@@ -21,7 +20,7 @@ export default function AppRoutes() {
           {/* <Route path="/markets" element={<Ourservices />} /> */}
           <Route path="/contact" element={<Contact />} />
           <Route path="/engine" element={<AIEngine />} />
-          <Route path="/markets" element={<Trade />} />
+          {/* <Route path="/markets" element={<Trade />} /> */}
         </Route>
 
         {/* Auth routes (outside layout) */}
