@@ -445,7 +445,7 @@ export default function Home() {
       {/* Live Performance */}
       <section className="py-32 bg-gradient-to-b from-black via-teal-950/20 to-black">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-6xl font-black mb-16 bg-gradient-to-r from-teal-400 to-yellow-400 bg-clip-text text-transparent">
+          <h2 className="text-6xl font-black mb-16 bg-gradient-to-r from-teal-400 to-yellow-400 bg-clip-text text-black">
             +41.8% Alpha in 2025 (Live)
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -463,7 +463,7 @@ export default function Home() {
       {/* MILESTONE MAP */}
       <section className="py-32 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-6xl md:text-8xl font-black text-center mb-20 bg-gradient-to-r from-teal-400 to-yellow-400 bg-clip-text text-transparent">
+          <h2 className="text-6xl md:text-8xl font-black text-center mb-20 bg-gradient-to-r from-teal-400 to-yellow-400 bg-clip-text text-black">
             Our Journey <FiMap className="inline ml-4" />
           </h2>
           <div className="relative">
