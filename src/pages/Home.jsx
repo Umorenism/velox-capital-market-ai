@@ -528,25 +528,69 @@ export default function Home() {
       </section>
 
       {/* TEAM */}
+            {/* TEAM - BUILT BY LEGENDS */}
       <section className="py-32 relative">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-6xl md:text-8xl font-black text-center mb-20 bg-gradient-to-r from-teal-400 to-yellow-400 bg-clip-text text-white">
+          <h2 className="text-6xl md:text-8xl font-black text-center mb-20 bg-gradient-to-r from-teal-400 to-yellow-400 bg-clip-text text-transparent">
             Built by Legends
           </h2>
           <div className="grid md:grid-cols-4 gap-10">
             {[
-              { name: "Alex Chen", role: "CEO • Ex-Jane Street" },
-              { name: "Dr. Sofia Patel", role: "Chief AI Scientist • PhD MIT" },
-              { name: "Marcus Wolf", role: "Head of Trading • Citadel Alum" },
-              { name: "Lena Kim", role: "CTO • Built Binance Smart Chain" },
+              {
+                name: "Alex Chen",
+                role: "CEO • Ex-Jane Street",
+                image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&h=1000&fit=crop&crop=face"
+              },
+              {
+                name: "Dr. Sofia Patel",
+                role: "Chief AI Scientist • PhD MIT",
+                image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=1000&fit=crop&crop=face"
+              },
+              {
+                name: "Marcus Wolf",
+                role: "Head of Trading • Citadel Alum",
+                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=1000&fit=crop&crop=face"
+              },
+              {
+                name: "Lena Kim",
+                role: "CTO • Built Binance Smart Chain",
+                image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=1000&fit=crop&crop=face"
+              },
             ].map((member, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.15 }} whileHover={{ y: -15 }}>
-                <div className="relative overflow-hidden rounded-3xl bg-gray-800 h-96 border border-teal-500/30">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70" />
-                  <div className="absolute bottom-0 p-8 text-left">
-                    <h3 className="text-3xl font-black">{member.name}</h3>
-                    <p className="text-teal-400 text-lg font-medium mt-2">{member.role}</p>
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.15 }}
+                whileHover={{ y: -15, scale: 1.03 }}
+                className="group relative"
+              >
+                <div className="relative overflow-hidden rounded-3xl h-96 border border-teal-500/30 shadow-2xl">
+                  {/* Team Member Photo */}
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover brightness-90 group-hover:brightness-100 transition-all duration-500 group-hover:scale-110"
+                  />
+
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-90" />
+
+                  {/* Glow on Hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-teal-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                  {/* Name & Role */}
+                  <div className="absolute bottom-0 left-0 right-0 p-8 text-left">
+                    <h3 className="text-3xl font-black text-white drop-shadow-lg">
+                      {member.name}
+                    </h3>
+                    <p className="text-teal-400 text-lg font-medium mt-2 drop-shadow-md">
+                      {member.role}
+                    </p>
                   </div>
+
+                  {/* Subtle Border Glow */}
+                  <div className="absolute inset-0 rounded-3xl ring-2 ring-transparent group-hover:ring-teal-400/50 transition-all duration-500" />
                 </div>
               </motion.div>
             ))}
