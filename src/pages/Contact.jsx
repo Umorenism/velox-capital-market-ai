@@ -42,7 +42,7 @@ export default function Contact() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mb-6 inline-block"
           >
-            <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-teal-400 via-cyan-400 to-gold-400 bg-clip-text text-black">
+            <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-teal-400 via-cyan-400 to-gold-400 bg-clip-text text-white">
               Contact Velox
             </h1>
           </motion.div>

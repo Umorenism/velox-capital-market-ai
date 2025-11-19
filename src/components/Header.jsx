@@ -57,7 +57,7 @@ export default function Header() {
     { name: "AI Alpha Engine", icon: <FiCpu />, path: "/engine" },
     { name: "Zero-Latency Infra", icon: <FiZap />, path: "/infra" },
     { name: "Risk Shield", icon: <FiShield />, path: "/risk" },
-    { name: "Portfolio Analytics", icon: <FiBarChart2 />, path: "/markets#analytics" },
+    { name: "Portfolio Analytics", icon: <FiBarChart2 />, path: "/analytics" },
   ];
 
   return (

@@ -43,7 +43,7 @@ export default function ZeroLatency() {
       </div>
 
       {/* Hero */}
-      <section className="relative pt-32 pb-24 px-6 md:pt-44">
+      <section className="relative pt-5 pb-24 px-6 md:pt-10">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}

@@ -55,7 +55,7 @@ export default function AIEngine() {
         </div>
 
         {/* Hero Section */}
-        <section className="relative pt-32 pb-20 px-6 md:pt-44">
+        <section className="relative pt-10 pb-20 px-6 md:pt-10">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 40 }}

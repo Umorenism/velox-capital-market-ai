@@ -13,6 +13,7 @@ import Trade from "./pages/Trade";
 import AIEngine from "./pages/AiEngine";
 import ZeroLatency from "./pages/ZeroLatency";
 import RiskManagement from "./pages/RiskManagement";
+import PortfolioAnalysis from "./pages/PortfolioAnalysis";
 // import Footer from "../components/Footer";
 // import Header from "../components/Header";
 export default function App() {
@@ -75,6 +76,14 @@ export default function App() {
           element={
               <MainLayout>
               < RiskManagement/>
+             </MainLayout>
+          }
+        />
+        <Route
+          path="/analytics"
+          element={
+              <MainLayout>
+              < PortfolioAnalysis/>
              </MainLayout>
           }
         />
