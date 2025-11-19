@@ -118,7 +118,7 @@ export default function Media() {
           <motion.h2
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="text-6xl md:text-8xl font-black bg-gradient-to-r from-teal-400 to-yellow-400 bg-clip-text text-black"
+            className="text-6xl md:text-8xl font-black bg-gradient-to-r from-teal-400 to-yellow-400 bg-clip-text text-white"
           >
             Intelligence at Light Speed
           </motion.h2>
@@ -153,7 +153,7 @@ export default function Media() {
           <motion.h2
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="text-6xl md:text-8xl font-black text-center mb-20 bg-gradient-to-r from-yellow-400 via-teal-400 to-cyan-400 bg-clip-text text-black"
+            className="text-6xl md:text-8xl font-black text-center mb-20 bg-gradient-to-r from-yellow-400 via-teal-400 to-cyan-400 bg-clip-text text-white"
           >
             As Seen In Global Markets
           </motion.h2>
@@ -211,7 +211,7 @@ export default function Media() {
             <div className="absolute inset-0 bg-gradient-to-r from-teal-500/40 to-cyan-400/40 blur-3xl animate-pulse" />
             <div className="relative bg-black/70 backdrop-blur-2xl border-2 border-teal-500/60 rounded-3xl p-20 shadow-3xl">
               <FiZap className="text-9xl text-teal-400 mx-auto mb-8 opacity-80" />
-              <h3 className="text-6xl font-black mb-8 bg-gradient-to-r from-teal-400 to-yellow-400 bg-clip-text text-black">
+              <h3 className="text-6xl font-black mb-8 bg-gradient-to-r from-teal-400 to-yellow-400 bg-clip-text text-white">
                 Velox Media Kit 2025
               </h3>
               <p className="text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
