@@ -346,7 +346,7 @@ export default function Home() {
 
         <motion.div style={{ y, opacity }} className="relative z-10 text-center px-6 max-w-7xl mx-auto">
           <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 1.2 }}>
-            <h1 className="text-7xl md:text-9xl font-black tracking-tighter bg-gradient-to-r from-teal-400 via-cyan-300 to-yellow-400 bg-clip-text text-black">
+            <h1 className="text-7xl md:text-9xl font-black tracking-tighter bg-gradient-to-r from-teal-400 via-cyan-300 to-yellow-400 bg-clip-text text-white">
               VELOX
             </h1>
             <p className="text-4xl md:text-6xl font-bold mt-4 text-white">
@@ -415,7 +415,7 @@ export default function Home() {
       <section className="py-32 relative">
         <div className="max-w-7xl mx-auto px-6">
           <motion.h2 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
-            className="text-6xl md:text-8xl font-black text-center bg-gradient-to-r from-teal-400 to-yellow-400 bg-clip-text text-black">
+            className="text-6xl md:text-8xl font-black text-center bg-gradient-to-r from-teal-400 to-yellow-400 bg-clip-text text-white">
             Trade Like the Future
           </motion.h2>
 
@@ -445,7 +445,7 @@ export default function Home() {
       {/* Live Performance */}
       <section className="py-32 bg-gradient-to-b from-black via-teal-950/20 to-black">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-6xl font-black mb-16 bg-gradient-to-r from-teal-400 to-yellow-400 bg-clip-text text-black">
+          <h2 className="text-6xl font-black mb-16 bg-gradient-to-r from-teal-400 to-yellow-400 bg-clip-text text-white">
             +41.8% Alpha in 2025 (Live)
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -463,7 +463,7 @@ export default function Home() {
       {/* MILESTONE MAP */}
       <section className="py-32 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-6xl md:text-8xl font-black text-center mb-20 bg-gradient-to-r from-teal-400 to-yellow-400 bg-clip-text text-black">
+          <h2 className="text-6xl md:text-8xl font-black text-center mb-20 bg-gradient-to-r from-teal-400 to-yellow-400 bg-clip-text text-white">
             Our Journey <FiMap className="inline ml-4" />
           </h2>
           <div className="relative">
@@ -495,7 +495,7 @@ export default function Home() {
       {/* JOIN COMMUNITY */}
       <section className="py-32 bg-gradient-to-b from-black via-teal-950/30 to-black">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-6xl md:text-8xl font-black mb-8 bg-gradient-to-r from-teal-400 to-yellow-400 bg-clip-text text-black">
+          <h2 className="text-6xl md:text-8xl font-black mb-8 bg-gradient-to-r from-teal-400 to-yellow-400 bg-clip-text text-white">
             Join the Movement
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-16">
@@ -530,7 +530,7 @@ export default function Home() {
       {/* TEAM */}
       <section className="py-32 relative">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-6xl md:text-8xl font-black text-center mb-20 bg-gradient-to-r from-teal-400 to-yellow-400 bg-clip-text text-black">
+          <h2 className="text-6xl md:text-8xl font-black text-center mb-20 bg-gradient-to-r from-teal-400 to-yellow-400 bg-clip-text text-white">
             Built by Legends
           </h2>
           <div className="grid md:grid-cols-4 gap-10">
@@ -557,7 +557,7 @@ export default function Home() {
       {/* CAREERS */}
       <section className="py-32 bg-gradient-to-r from-teal-900/20 via-cyan-900/20 to-yellow-900/20">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-6xl md:text-8xl font-black mb-12 bg-gradient-to-r from-teal-400 to-yellow-400 bg-clip-text text-black">
+          <h2 className="text-6xl md:text-8xl font-black mb-12 bg-gradient-to-r from-teal-400 to-yellow-400 bg-clip-text text-white">
             We Are Hiring
           </h2>
           <p className="text-2xl text-gray-300 mb-16 max-w-4xl mx-auto">

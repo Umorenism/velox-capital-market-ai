@@ -8,6 +8,7 @@ import Signin from "../auth/Signin";
 import MainLayout from "../layouts/MainLayout";
 import AIEngine from "../pages/AiEngine";
 import Media from "../pages/Media";
+import Trade from "../pages/Trade";
 
 export default function AppRoutes() {
   return (
@@ -17,9 +18,10 @@ export default function AppRoutes() {
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/media" element={<Media />} />
-          <Route path="/markets" element={<Ourservices />} />
+          {/* <Route path="/markets" element={<Ourservices />} /> */}
           <Route path="/contact" element={<Contact />} />
           <Route path="/engine" element={<AIEngine />} />
+          <Route path="/markets" element={<Trade />} />
         </Route>
 
         {/* Auth routes (outside layout) */}
