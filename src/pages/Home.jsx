@@ -244,77 +244,109 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TEAM */}
-            {/* TEAM - BUILT BY LEGENDS */}
+            
+      {/* OUR SERVICES – EDUCATION + CASHBACK (Replaces the old Team section) */}
+      
       <section className="py-32 relative">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-6xl md:text-8xl font-black text-center mb-20 bg-gradient-to-r from-teal-400 to-yellow-400 bg-clip-text text-transparent">
-            Built by Legends
-          </h2>
-          <div className="grid md:grid-cols-4 gap-10">
-            {[
-              {
-                name: "Alex Chen",
-                role: "CEO • Ex-Jane Street",
-                image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&h=1000&fit=crop&crop=face"
-              },
-              {
-                name: "Dr. Sofia Patel",
-                role: "Chief AI Scientist • PhD MIT",
-                image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=1000&fit=crop&crop=face"
-              },
-              {
-                name: "Marcus Wolf",
-                role: "Head of Trading • Citadel Alum",
-                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=1000&fit=crop&crop=face"
-              },
-              {
-                name: "Lena Kim",
-                role: "CTO • Built Binance Smart Chain",
-                image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=1000&fit=crop&crop=face"
-              },
-            ].map((member, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.15 }}
-                whileHover={{ y: -15, scale: 1.03 }}
-                className="group relative"
-              >
-                <div className="relative overflow-hidden rounded-3xl h-96 border border-teal-500/30 shadow-2xl">
-                  {/* Team Member Photo */}
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover brightness-90 group-hover:brightness-100 transition-all duration-500 group-hover:scale-110"
-                  />
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-20"
+          >
+            <h2 className="text-6xl md:text-8xl font-black bg-gradient-to-r from-teal-400 via-cyan-300 to-yellow-400 bg-clip-text text-white">
+              Our Services
+            </h2>
+            <p className="text-2xl text-gray-300 mt-8 max-w-4xl mx-auto">
+              Financial education combined with real AI-powered trading – you learn, we trade, you earn cashback.
+            </p>
+          </motion.div>
 
-                  {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-90" />
-
-                  {/* Glow on Hover */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-teal-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                  {/* Name & Role */}
-                  <div className="absolute bottom-0 left-0 right-0 p-8 text-left">
-                    <h3 className="text-3xl font-black text-white drop-shadow-lg">
-                      {member.name}
-                    </h3>
-                    <p className="text-teal-400 text-lg font-medium mt-2 drop-shadow-md">
-                      {member.role}
-                    </p>
-                  </div>
-
-                  {/* Subtle Border Glow */}
-                  <div className="absolute inset-0 rounded-3xl ring-2 ring-transparent group-hover:ring-teal-400/50 transition-all duration-500" />
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left – Education Focus */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3 }}
+              className="space-y-10"
+            >
+              <div className="bg-white/5 backdrop-blur-xl border border-teal-500/30 rounded-3xl p-10">
+                <div className="w-20 h-20 bg-gradient-to-br from-teal-500 to-cyan-400 rounded-2xl flex items-center justify-center mb-6">
+                  <FiTrendingUp size={40} className="text-black" />
                 </div>
-              </motion.div>
-            ))}
+                <h3 className="text-4xl font-black mb-4">World-Class Education</h3>
+                <p className="text-xl text-gray-300 leading-relaxed">
+                  Just like CashFX, we believe knowledge is power. Get access to live mentorship, 
+                  step-by-step courses, daily market analysis, and private mastermind sessions – 
+                  everything you need to become a confident trader.
+                </p>
+              </div>
+
+              <div className="bg-white/5 backdrop-blur-xl border border-teal-500/30 rounded-3xl p-10">
+                <div className="w-20 h-20 bg-gradient-to-br from-yellow-500 to-amber-400 rounded-2xl flex items-center justify-center mb-6">
+                  <FiCpu size={40} className="text-black" />
+                </div>
+                <h3 className="text-4xl font-black mb-4">Proprietary AI Bots</h3>
+                <p className="text-xl text-gray-300 leading-relaxed">
+                  Our in-house neural alpha engine trades Gold, Bitcoin, Silver & major forex pairs 
+                  24/7 with institutional-grade precision. No emotions. No mistakes. Pure data-driven profit.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Right – Cashback Model */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.5 }}
+              className="relative"
+            >
+              <div className="bg-gradient-to-br from-teal-900/40 via-cyan-900/30 to-yellow-900/20 backdrop-blur-2xl border border-teal-500/50 rounded-3xl p-12 shadow-2xl">
+                <div className="text-center mb-10">
+                  <h3 className="text-5xl font-black bg-gradient-to-r from-teal-400 to-yellow-400 bg-clip-text text-white">
+                    Passive Cashback Rewards
+                  </h3>
+                  <p className="text-7xl font-black text-teal-400 mt-6">
+                    Up to <span className="text-yellow-400">70%</span>
+                  </p>
+                  <p className="text-2xl text-gray-300 mt-2">of trading profits paid back weekly</p>
+                </div>
+
+                <ul className="space-y-6 text-xl text-gray-200">
+                  {[
+                    "No personal trading required",
+                    "Weekly cashback in USDT or fiat",
+                    "Fully transparent performance dashboard",
+                    "Capital always under your control",
+                    "Zero lock-up periods – withdraw anytime",
+                  ].map((item, i) => (
+                    <motion.li
+                      key={i}
+                      initial={{ opacity: 0, x: -30 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.7 + i * 0.1 }}
+                      className="flex items-center gap-4"
+                    >
+                      <div className="w-3 h-3 bg-teal-400 rounded-full flex-shrink-0" />
+                      {item}
+                    </motion.li>
+                  ))}
+                </ul>
+
+                <motion.a
+                  href="#"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="mt-12 w-full block text-center py-6 bg-gradient-to-r from-teal-500 to-cyan-400 text-black text-xl font-bold rounded-2xl shadow-xl"
+                >
+                  Start Earning Cashback Today
+                </motion.a>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
-
       {/* CAREERS */}
       <section className="py-32 bg-gradient-to-r from-teal-900/20 via-cyan-900/20 to-yellow-900/20">
         <div className="max-w-7xl mx-auto px-6 text-center">
