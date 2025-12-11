@@ -59,7 +59,7 @@ export default function MentorshipLivePage() {
         ))}
 
         {/* Header */}
-        <header className="relative w-full py-8 px-6 border-b border-teal-800/60 backdrop-blur-2xl bg-black/70 sticky top-0 z-50">
+        {/* <header className="relative w-full py-8 px-6 border-b border-teal-800/60 backdrop-blur-2xl bg-black/70 sticky top-0 z-50">
           <motion.div 
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -78,10 +78,10 @@ export default function MentorshipLivePage() {
               <span className="font-medium">LIVE • Mentorship Arena</span>
             </motion.div>
           </motion.div>
-        </header>
+        </header> */}
 
         {/* Hero Section */}
-        <section className="relative py-32 px-6 text-center">
+        <section className="relative py-10 px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 80 }}
             animate={{ opacity: 1, y: 0 }}

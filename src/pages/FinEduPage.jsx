@@ -38,7 +38,7 @@ export default function FinEduPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 to-black text-slate-100 p-4 sm:p-8">
       {/* Top bar */}
-      <header className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+      {/* <header className="max-w-7xl mx-auto flex items-center justify-between gap-4">
         <div className="flex items-center gap-3">
           <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-teal-400 to-cyan-300 flex items-center justify-center shadow-lg">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -59,7 +59,7 @@ export default function FinEduPage() {
         <div className="md:hidden">
           <button className="p-2 rounded-full bg-slate-800/50">Menu</button>
         </div>
-      </header>
+      </header> */}
 
       {/* Hero */}
       <main className="max-w-7xl mx-auto mt-8 grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">

@@ -70,7 +70,7 @@ export default function SMEInstitutionalPage() {
         ))}
 
         {/* Header */}
-        <header className="relative w-full py-8 px-6 border-b border-teal-800/60 backdrop-blur-2xl bg-black/60 sticky top-0 z-50">
+        {/* <header className="relative w-full py-8 px-6 border-b border-teal-800/60 backdrop-blur-2xl bg-black/60 sticky top-0 z-50">
           <motion.div 
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -95,10 +95,10 @@ export default function SMEInstitutionalPage() {
               <span className="font-medium">Institutional • SME Robotics</span>
             </motion.div>
           </motion.div>
-        </header>
+        </header> */}
 
         {/* Hero Section - Ultra Robotics */}
-        <section className="relative py-32 px-6 text-center">
+        <section className="relative py-10 px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}

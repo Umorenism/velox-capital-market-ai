@@ -6,15 +6,15 @@ export default function FintechTradingPage() {
   return (
     <div className="min-h-screen bg-gray-950 text-white flex flex-col">
       {/* Header Section */}
-      <header className="w-full py-6 px-6 border-b border-teal-800/40 backdrop-blur-xl bg-black/40 sticky top-0 z-50">
+      {/* <header className="w-full py-6 px-6 border-b border-teal-800/40 backdrop-blur-xl bg-black/40 sticky top-0 z-50">
         <h1 className="text-3xl font-bold flex items-center gap-3">
           <Bot className="text-teal-400 animate-pulse" size={32} />
           FinTech Robotics • Forex Education
         </h1>
-      </header>
+      </header> */}
 
       {/* Hero Section */}
-      <section className="w-full py-20 px-6 flex flex-col items-center text-center bg-gradient-to-b from-black to-gray-900">
+      <section className="w-full py-10 px-6 flex flex-col items-center text-center bg-gradient-to-b from-black to-gray-900">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}

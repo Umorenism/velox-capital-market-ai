@@ -48,7 +48,7 @@ export default function LiveTradingPage() {
         </div>
 
         {/* Header */}
-        <header className="w-full py-6 px-6 border-b border-teal-800/40 backdrop-blur-xl bg-black/50 sticky top-0 z-50">
+        {/* <header className="w-full py-6 px-6 border-b border-teal-800/40 backdrop-blur-xl bg-black/50 sticky top-0 z-50">
           <div className="flex items-center justify-between max-w-7xl mx-auto">
             <h1 className="text-3xl font-bold flex items-center gap-3">
               <Zap className="text-teal-400 animate-pulse" size={36} />
@@ -63,10 +63,10 @@ export default function LiveTradingPage() {
               </div>
             </div>
           </div>
-        </header>
+        </header> */}
 
         {/* Hero Section */}
-        <section className="w-full py-24 px-6 flex flex-col items-center text-center bg-gradient-to-b from-black via-gray-950 to-black">
+        <section className="w-full py-10 px-6 flex flex-col items-center text-center bg-gradient-to-b from-black via-gray-950 to-black">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}

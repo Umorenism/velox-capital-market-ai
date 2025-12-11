@@ -21,6 +21,8 @@ import {
   FiArrowRight
 } from "react-icons/fi";
 
+const REGISTER_LINK = "https://veloxcapitalmarket.ai/register";
+
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -64,6 +66,11 @@ export default function Header() {
   { name: "Bank API", icon: <FiDatabase />, path: "/bank-api" },
   { name: "Live Mentorship", icon: <FiVideo />, path: "/mentorship-live" },
 ];
+
+const handleRegisterClick = () => {
+    window.open(REGISTER_LINK, "_blank", "noopener,noreferrer");
+    // Or use: window.location.href = REGISTER_LINK; // if you want same tab
+  };
 
   return (
     <>
@@ -171,106 +178,115 @@ export default function Header() {
       </motion.header>
 
       {/* MOBILE SIDE DRAWER — FULLY FIXED & GORGEOUS */}
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <motion.div
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100%" }}
-            transition={{ type: "tween", duration: 0.4, ease: "easeOut" }}
-            className="fixed inset-0 z-40 lg:hidden"
+      {/* MOBILE SIDE DRAWER — FIXED, NO GAPS, PERFECT */}
+<AnimatePresence>
+  {mobileMenuOpen && (
+    <>
+      {/* Backdrop */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        onClick={() => setMobileMenuOpen(false)}
+        className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40"
+      />
+
+      {/* Drawer Panel — Full height, no overflow gap */}
+      <motion.div
+        initial={{ x: "100%" }}
+        animate={{ x: 0 }}
+        exit={{ x: "100%" }}
+        transition={{ type: "tween", duration: 0.35, ease: "easeOut" }}
+        className="fixed inset-y-0 right-0 w-full max-w-md bg-black shadow-2xl z-50 flex flex-col"
+      >
+        {/* Header with close button */}
+        <div className="flex justify-between items-center p-8 border-b border-teal-900/50">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-gradient-to-br from-teal-500 to-cyan-400 rounded-xl flex items-center justify-center font-black text-black text-xl">
+              V
+            </div>
+            <span className="text-2xl font-bold text-teal-400">VELOX</span>
+          </div>
+          <button
+            onClick={() => setMobileMenuOpen(false)}
+            className="text-3xl text-gray-400 hover:text-white transition"
           >
-            {/* Backdrop */}
-            <div
-              className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+            <FiX />
+          </button>
+        </div>
+
+        {/* Scrollable Content */}
+        <div className="flex-1 overflow-y-auto px-8 py-10">
+          <nav className="space-y-12">
+            <Link
+              to="/"
               onClick={() => setMobileMenuOpen(false)}
-            />
+              className="block text-2xl font-medium text-white hover:text-teal-400 transition"
+            >
+              Platform
+            </Link>
 
-            {/* Drawer Panel */}
-            <div className="absolute inset-y-0 right-0 w-full max-w-sm bg-gradient-to-b from-black via-black to-teal-950/20 shadow-2xl">
-              <div className="flex flex-col h-full pt-32 px-10 pb-10 overflow-y-auto">
-                {/* Close Button Inside */}
-                <button
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="absolute top-8 right-8 text-4xl text-gray-400 hover:text-white transition"
-                >
-                  <FiX />
-                </button>
-
-                {/* Navigation Links */}
-                <nav className="space-y-10 text-3xl font-medium">
+            <div className="space-y-6">
+              <p className="text-teal-400 font-bold text-xl">Our Services</p>
+              <div className="space-y-5">
+                {services.map((s) => (
                   <Link
-                    to="/"
+                    key={s.name}
+                    to={s.path}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block text-white hover:text-teal-400 transition-colors"
+                    className="flex items-center gap-5 text-gray-300 hover:text-white transition"
                   >
-                    Platform
+                    <span className="text-2xl text-teal-400">{s.icon}</span>
+                    <span className="text-lg">{s.name}</span>
                   </Link>
-
-                  {/* Our Services Section */}
-                  <div className="space-y-6">
-                    <p className="text-teal-400 font-bold text-2xl">Our Services</p>
-                    <div className="space-y-5 ml-2">
-                      {services.map((s) => (
-                        <Link
-                          key={s.name}
-                          to={s.path}
-                          onClick={() => setMobileMenuOpen(false)}
-                          className="flex items-center gap-5 py-2 text-gray-300 hover:text-white transition"
-                        >
-                          <span className="text-2xl text-teal-400">{s.icon}</span>
-                          <span className="text-xl font-light">{s.name}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-
-                  <Link
-                    to="/media"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block text-white hover:text-teal-400 transition-colors"
-                  >
-                    Media
-                  </Link>
-
-                  <Link
-                    to="/contact"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block text-white hover:text-teal-400 transition-colors"
-                  >
-                    Contact
-                  </Link>
-                </nav>
-
-                {/* Divider */}
-                <div className="my-12 h-px bg-gradient-to-r from-transparent via-teal-800 to-transparent" />
-
-                {/* Auth & CTA */}
-                <div className="space-y-8">
-                  <Link
-                    to="/login"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block text-xl font-semibold text-teal-400 hover:text-teal-300"
-                  >
-                    Sign In
-                  </Link>
-
-                  <motion.button
-                    whileTap={{ scale: 0.95 }}
-                    onClick={() => {
-                      setMobileMenuOpen(false);
-                      setIsModalOpen(true);
-                    }}
-                    className="w-full py-5 bg-gradient-to-r from-teal-500 to-cyan-400 text-black text-xl font-bold rounded-2xl shadow-2xl"
-                  >
-                    Register Now
-                  </motion.button>
-                </div>
+                ))}
               </div>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+
+            <Link
+              to="/media"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block text-2xl font-medium text-white hover:text-teal-400 transition"
+            >
+              Media
+            </Link>
+
+            <Link
+              to="/contact"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block text-2xl font-medium text-white hover:text-teal-400 transition"
+            >
+              Contact
+            </Link>
+          </nav>
+
+          <div className="mt-16 pt-10 border-t border-teal-900/50 space-y-8">
+            <Link
+              to="/login"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block text-xl font-medium text-teal-400 hover:text-teal-300"
+            >
+              Sign In
+            </Link>
+
+            {/* REGISTER NOW → Opens your external link */}
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={() => {
+                setMobileMenuOpen(false);
+                window.open(REGISTER_LINK, "_blank", "noopener,noreferrer");
+              }}
+              className="w-full py-6 bg-gradient-to-r from-teal-500 to-cyan-400 text-black text-xl font-bold rounded-2xl shadow-2xl hover:shadow-teal-500/50 transition-all"
+            >
+              Register Now
+            </motion.button>
+          </div>
+        </div>
+      </motion.div>
+    </>
+  )}
+</AnimatePresence>
 
       {/* Open Account Modal */}
       {isModalOpen && (
