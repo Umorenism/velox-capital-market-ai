@@ -259,7 +259,7 @@ export default function EducationCashbackDashboard() {
               Learn Trading
             </span><br />
             <span className="text-white">Get Paid</span><br />
-            <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-white">
               Every Week
             </span>
           </h1>

@@ -93,13 +93,13 @@ export default function Media() {
             transition={{ delay: 1.8 }}
           >
             <a
-              href="#press-kit"
+              href="/signup"
               className="group px-12 py-6 bg-gradient-to-r from-teal-500 to-cyan-400 text-black font-bold text-xl rounded-full shadow-2xl hover:shadow-teal-500/70 transition-all flex items-center gap-4"
             >
               <FiDownload size={28} /> Download Press Kit
             </a>
             <a
-              href="#"
+              href="/signup"
               className="px-12 py-6 border-2 border-teal-400/80 text-teal-300 rounded-full text-xl backdrop-blur-md hover:bg-teal-400/10 transition-all flex items-center gap-4"
             >
               <FiPlayCircle size={28} /> Watch AI in Action

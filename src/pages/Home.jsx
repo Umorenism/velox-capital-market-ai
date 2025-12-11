@@ -95,7 +95,7 @@ export default function Home() {
 
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.6 }}
             className="mt-16 flex flex-col sm:flex-row gap-6 justify-center">
-            <motion.a href="#" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
+            <motion.a href="/signup" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
               className="group relative px-12 py-6 bg-gradient-to-r from-teal-500 to-cyan-400 text-black text-xl font-bold rounded-full shadow-2xl overflow-hidden">
               <span className="relative z-10 flex items-center gap-3">
                 Start Trading Live <FiArrowRight className="group-hover:translate-x-2 transition" />
@@ -103,7 +103,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition duration-300" />
             </motion.a>
 
-            <motion.a href="#" whileHover={{ scale: 1.05 }}
+            <motion.a href="/signup" whileHover={{ scale: 1.05 }}
               className="px-12 py-6 border-2 border-teal-400/70 text-teal-300 rounded-full text-xl font-medium backdrop-blur-md flex items-center gap-3">
               <FiPlayCircle /> Watch AI Demo
             </motion.a>
@@ -118,15 +118,38 @@ export default function Home() {
 
       {/* Trusted By Marquee */}
       <section className="py-16 bg-black/80 backdrop-blur-xl border-y border-teal-900/50">
-        <div className="overflow-hidden">
-          <motion.div animate={{ x: [0, -1000] }} transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
-            className="flex gap-16 items-center text-4xl font-bold text-gray-600">
-            {["Bloomberg", "Forbes", "CNBC", "Financial Times", "Reuters", "TechCrunch", "Barron’s", "The Block"]
-              .concat(["Bloomberg", "Forbes", "CNBC", "Financial Times"])
-              .map((name, i) => (<span key={i}>{name}</span>))}
-          </motion.div>
-        </div>
-      </section>
+  <div className="overflow-hidden">
+    <motion.div 
+      animate={{ x: [0, -1000] }} 
+      transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+      className="flex gap-16 items-center text-4xl font-bold text-gray-600"
+    >
+
+      {[
+        "Bitcoin (BTC)",
+        "Ethereum (ETH)",
+        "Gold (XAU)",
+        "Silver (XAG)",
+        "EUR/USD",
+        "GBP/USD",
+        "USD/JPY",
+        "Crude Oil (WTI)",
+        "Natural Gas (NG)"
+      ]
+        .concat([
+          "Bitcoin (BTC)",
+          "Gold (XAU)",
+          "EUR/USD",
+          "USD/JPY"
+        ])
+        .map((asset, i) => (
+          <span key={i}>{asset}</span>
+        ))}
+
+    </motion.div>
+  </div>
+</section>
+
 
       {/* Features */}
       <section className="py-32 relative">
@@ -335,7 +358,7 @@ export default function Home() {
                 </ul>
 
                 <motion.a
-                  href="#"
+                  href="/signup"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="mt-12 w-full block text-center py-6 bg-gradient-to-r from-teal-500 to-cyan-400 text-black text-xl font-bold rounded-2xl shadow-xl"
@@ -372,14 +395,14 @@ export default function Home() {
                     <span key={tag} className="px-4 py-2 bg-teal-500/20 text-teal-300 rounded-full text-sm font-medium">{tag}</span>
                   ))}
                 </div>
-                <a href="#" className="mt-8 inline-flex items-center text-teal-400 font-bold text-lg">
+                <a href="/signup" className="mt-8 inline-flex items-center text-teal-400 font-bold text-lg">
                   Apply Now <FiArrowRight className="ml-2 group-hover:translate-x-2 transition" />
                 </a>
               </motion.div>
             ))}
           </div>
 
-          <motion.a href="#" whileHover={{ scale: 1.1 }}
+          <motion.a href="/signup" whileHover={{ scale: 1.1 }}
             className="mt-16 inline-block px-16 py-6 bg-gradient-to-r from-teal-500 to-cyan-400 text-black text-2xl font-bold rounded-full shadow-2xl">
             See All Open Roles
           </motion.a>

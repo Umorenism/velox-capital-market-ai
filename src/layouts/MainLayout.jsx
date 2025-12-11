@@ -8,7 +8,7 @@ export default function MainLayout({ children }) {
         <Header />
 
         {/* Add padding to push down all pages uniformly */}
-        <main className="flex-grow">
+        <main className="flex-grow bg-gray-950">
           {children}
         </main>
 

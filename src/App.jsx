@@ -14,6 +14,15 @@ import AIEngine from "./pages/AiEngine";
 import ZeroLatency from "./pages/ZeroLatency";
 import RiskManagement from "./pages/RiskManagement";
 import PortfolioAnalysis from "./pages/PortfolioAnalysis";
+import FinEduPage from "./pages/FinEduPage";
+import FintechTradingPage from "./pages/FintechTradingPage";
+import CopyTradingPage from "./pages/CopyTradingPage";
+import PAMMPage from "./pages/PAMMPage";
+import LiveTradingPage from "./pages/LiveTradingPage";
+import RetirementBloq from "./pages/RetirementBloq";
+import SMEInstitutionalPage from "./pages/SMEInstitutionalPage";
+import BankApiPage from "./pages/BankApiPage";
+import MentorshipLivePage from "./pages/MentorshipLivePage";
 // import Footer from "../components/Footer";
 // import Header from "../components/Header";
 export default function App() {
@@ -60,6 +69,78 @@ export default function App() {
           element={
               <MainLayout>
               < AIEngine/>
+             </MainLayout>
+          }
+        />
+        <Route
+          path="/fin-education"
+          element={
+              <MainLayout>
+              < FinEduPage/>
+             </MainLayout>
+          }
+        />
+        <Route
+          path="/live-trading"
+          element={
+              <MainLayout>
+              < LiveTradingPage/>
+             </MainLayout>
+          }
+        />
+        <Route
+          path="/retirement-blog"
+          element={
+              <MainLayout>
+              < RetirementBloq/>
+             </MainLayout>
+          }
+        />
+        <Route
+          path="/sme-institutional"
+          element={
+              <MainLayout>
+              < SMEInstitutionalPage/>
+             </MainLayout>
+          }
+        />
+        <Route
+          path="/bank-api"
+          element={
+              <MainLayout>
+              < BankApiPage/>
+             </MainLayout>
+          }
+        />
+        <Route
+          path="/mentorship-live"
+          element={
+              <MainLayout>
+              < MentorshipLivePage/>
+             </MainLayout>
+          }
+        />
+        <Route
+          path="/fintech"
+          element={
+              <MainLayout>
+              < FintechTradingPage/>
+             </MainLayout>
+          }
+        />
+        <Route
+          path="/copy-trading"
+          element={
+              <MainLayout>
+              < CopyTradingPage/>
+             </MainLayout>
+          }
+        />
+        <Route
+          path="/pamm"
+          element={
+              <MainLayout>
+              < PAMMPage/>
              </MainLayout>
           }
         />

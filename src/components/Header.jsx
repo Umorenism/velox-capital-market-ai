@@ -6,18 +6,19 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import {
+  FiTrendingUp,
+  FiCpu,
+  FiUsers,
+  FiLayers,
+  FiBarChart2,
+  FiBookOpen,
+  FiBriefcase,
+  FiDatabase,
+  FiVideo,
   FiMenu,
   FiX,
-  FiArrowRight,
   FiUser,
-  FiMail,
-  FiLock,
-  FiGlobe,
-  FiZap,
-  FiCpu,
-  FiShield,
-  FiTrendingUp,
-  FiBarChart2,
+  FiArrowRight
 } from "react-icons/fi";
 
 export default function Header() {
@@ -53,12 +54,16 @@ export default function Header() {
   }, [location]);
 
   const services = [
-    { name: "Live Trading", icon: <FiTrendingUp />, path: "/markets" },
-    { name: "AI Alpha Engine", icon: <FiCpu />, path: "/engine" },
-    { name: "Zero-Latency Infra", icon: <FiZap />, path: "/infra" },
-    { name: "Risk Shield", icon: <FiShield />, path: "/risk" },
-    { name: "Portfolio Analytics", icon: <FiBarChart2 />, path: "/analytics" },
-  ];
+  { name: "Fin-Edu", icon: <FiBookOpen />, path: "/fin-education" },
+  { name: "Fintech", icon: <FiCpu />, path: "/fintech" },
+  { name: "Copy Trading", icon: <FiLayers />, path: "/copy-trading" },
+  { name: "PAMM", icon: <FiUsers />, path: "/pamm" },
+  { name: "Live Trading", icon: <FiBarChart2 />, path: "/live-trading" },
+  { name: "Retirement Blog", icon: <FiTrendingUp />, path: "/retirement-blog" },
+  { name: "SME / Institutional", icon: <FiBriefcase />, path: "/sme-institutional" },
+  { name: "Bank API", icon: <FiDatabase />, path: "/bank-api" },
+  { name: "Live Mentorship", icon: <FiVideo />, path: "/mentorship-live" },
+];
 
   return (
     <>
@@ -145,11 +150,11 @@ export default function Header() {
               Sign In
             </Link>
             <button
-              onClick={() => setIsModalOpen(true)}
+              // onClick={() => setIsModalOpen(true)}
               className="group relative px-8 py-3 bg-gradient-to-r from-teal-500 to-cyan-400 text-black font-bold rounded-full overflow-hidden shadow-lg"
             >
               <span className="relative z-10 flex items-center gap-2">
-                Open Account <FiArrowRight />
+                Register Now <FiArrowRight />
               </span>
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition duration-300" />
             </button>
@@ -211,7 +216,7 @@ export default function Header() {
                           key={s.name}
                           to={s.path}
                           onClick={() => setMobileMenuOpen(false)}
-                          className="flex items-center gap-5 py-3 text-gray-300 hover:text-white transition"
+                          className="flex items-center gap-5 py-2 text-gray-300 hover:text-white transition"
                         >
                           <span className="text-2xl text-teal-400">{s.icon}</span>
                           <span className="text-xl font-light">{s.name}</span>
@@ -258,7 +263,7 @@ export default function Header() {
                     }}
                     className="w-full py-5 bg-gradient-to-r from-teal-500 to-cyan-400 text-black text-xl font-bold rounded-2xl shadow-2xl"
                   >
-                    Open Account
+                    Register Now
                   </motion.button>
                 </div>
               </div>
