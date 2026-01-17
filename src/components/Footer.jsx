@@ -124,7 +124,7 @@ const Footer = () => {
           {/* Copyright & Regulation */}
           <div>
             <p className="text-teal-300 font-medium">
-              © {currentYear} Velox Technologies Inc. All rights reserved.
+              © {currentYear} VeloxCapitalMarket.ai. All rights reserved.
             </p>
             <p className="text-gray-500 text-sm mt-2">
               Regulated by SEC • CFTC • FCA • MAS • Licensed in 40+ jurisdictions
